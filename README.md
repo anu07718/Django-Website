@@ -4,8 +4,8 @@ An elegant, responsive **Django-powered website** with smooth navigation, intera
 
 The project includes **Home**, **Features**, **Contact**, and other customizable pages with modern styling.
 
-![Project Banner](assets/banner.png)
-*(Replace with your project screenshot)*
+<img width="943" height="447" alt="image" src="https://github.com/user-attachments/assets/4373a45b-5877-48c1-bf3c-e705a4f25079" />
+
 
 ---
 
