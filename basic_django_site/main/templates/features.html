@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Features</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* Background video styling */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Page content styling */
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 60px;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="video-background">
+        <source src="{% static 'videos/features.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Page Content -->
+    <div class="content">
+        <h1>Our Key Features</h1>
+        <p>
+            Explore the powerful features that make our platform stand out. 
+            From seamless integration to real-time updates, we are committed 
+            to delivering the best user experience possible.
+        </p>
+        <p>
+            Whether you're a casual user or a professional, our platform 
+            adapts to your needs — offering speed, security, and scalability.
+        </p>
+         <a href="{% url 'home' %}" class="btn">⬅ Back to Home</a>
+    </div>
+
+</body>
+</html>

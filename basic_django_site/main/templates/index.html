@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My 3D Django Site</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* Fullscreen background video for Home */
+        #bgVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* General body style */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        /* Navbar */
+        nav {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        /* Content positioning */
+        .content {
+            position: relative;
+            top: 30%;
+            transform: translateY(-30%);
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        p {
+            font-size: 1.2em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+
+        /* Button styling */
+        button {
+            background-color: orange;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            color: white;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: darkorange;
+        }
+
+        /* Section with background video (for About & Features) */
+        .section-with-video {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .section-with-video .content {
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Background Video -->
+    <video autoplay muted loop playsinline id="bgVideo">
+        <source src="{% static 'bg.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'features' %}">Features</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+
+    <!-- Home Content -->
+    <div class="content">
+        <h1>🚀 Welcome to My Django Website</h1>
+        <p>Beautiful 3D animated background with smooth navigation.</p>
+        <button onclick="alert('You clicked the button!')">Click Me</button>
+    </div>
+
+    <!-- About Section with Video -->
+    <section id="about" class="section-with-video">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="{% static 'videos/about.mp4' %}" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>About Us</h2>
+            <p>We are passionate about creating immersive and dynamic web experiences.</p>
+        </div>
+    </section>
+
+    <!-- Features Section with Video -->
+    <section id="features" class="section-with-video">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="{% static 'videos/features.mp4' %}" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>Features</h2>
+            <ul>
+                <li>⚡ Fast Performance</li>
+                <li>🎨 Beautiful Design</li>
+                <li>🔒 Secure & Reliable</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

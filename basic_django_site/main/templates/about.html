@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Video background */
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        /* Content styling */
+        .container {
+            position: relative;
+            z-index: 1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            margin: 50px auto;
+            width: 70%;
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff6600;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #e65c00;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop class="video-background">
+        <source src="{% static 'videos/about.mp4' %}" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="container">
+        <h1>About Our Website</h1>
+        <p>
+            Welcome to our Django site!  
+            This page is here to tell you a little more about what we do and why we built this site.  
+            We aim to provide a simple, clean, and fast experience for all visitors.
+        </p>
+        <a href="{% url 'home' %}" class="btn">⬅ Back to Home</a>
+    </div>
+
+</body>
+</html>
