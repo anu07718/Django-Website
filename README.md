@@ -4,8 +4,6 @@ An elegant, responsive **Django-powered website** with smooth navigation, intera
 
 The project includes **Home**, **Features**, **Contact**, and other customizable pages with modern styling.
 
-<img width="943" height="447" alt="image" src="https://github.com/user-attachments/assets/4373a45b-5877-48c1-bf3c-e705a4f25079" />
-
 
 ---
 
@@ -68,16 +66,16 @@ It's designed as a **starting point** for anyone wanting to quickly build and cu
 ## 📷 Screenshots
 
 ### 🏠 Home Page
-![Home Page](assets/home.png)
-*Clean landing page with hero section and navigation*
+<img width="943" height="447" alt="image" src="https://github.com/user-attachments/assets/4373a45b-5877-48c1-bf3c-e705a4f25079" />
 
-### 🎥 Features Page with Background Video
-![Features Page](assets/features.png)
-*Interactive features showcase with video background*
+### 🎥 About Page
+<img width="1898" height="888" alt="image" src="https://github.com/user-attachments/assets/30ceca2b-b56b-40e2-9233-1622c5dfbffc" />
+
+### 🤖 Feature Page
+<img width="1919" height="882" alt="image" src="https://github.com/user-attachments/assets/fd6a2979-4612-4852-92c3-15e0d6904276" />
 
 ### 📩 Contact Page
-![Contact Page](assets/contact.png)
-*Professional contact form with validation*
+<img width="1907" height="885" alt="image" src="https://github.com/user-attachments/assets/3f8be154-fbf9-4401-b92b-bfd9ec476bd8" />
 
 ---
 
