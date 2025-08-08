@@ -252,21 +252,12 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License** — you are free to use, modify, and distribute it.
-
-See the [LICENSE](LICENSE) file for details.
-
----
 
 ## 📞 Contact
 
-**Your Name** - your.email@example.com
+**Your Name** - askotal07@gmail.com
 
-**Project Link:** [https://github.com/your-username/your-repo-name](https://github.com/your-username/your-repo-name)
-
-**Live Demo:** [https://your-website-demo.com](https://your-website-demo.com)
+**Project Link:** https://github.com/anu07718/Django-Website
 
 ---
 
